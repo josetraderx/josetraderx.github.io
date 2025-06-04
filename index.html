@@ -5,78 +5,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Jose Acosta</title> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title>Jose Acosta - Quantitative Developer | Data Scientist</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            /* Mejoras para la sección del nombre y rol en la navbar */
+            /* --- Estilos para la Navbar y la Sección del Logo/Rol --- */
             #mainNav {
-                background-color: rgba(0, 0, 0, 0.4); /* Un ligero overlay oscuro para mejorar el contraste del texto sobre la imagen */
+                background-color: rgba(0, 0, 0, 0.5); /* Un poco más de opacidad para mejor contraste */
+                transition: background-color 0.3s ease; /* Transición suave para el fondo */
             }
 
+            /* Quita el fondo oscuro cuando la barra se hace más pequeña al hacer scroll, si así lo tienes configurado en styles.css.
+               Si no, asegúrate de que el script.js o la clase .navbar-scrolled de Bootstrap no lo sobrescriban. */
+            #mainNav.navbar-scrolled {
+                background-color: #fff; /* O el color que desees para el scroll, por ejemplo, blanco */
+            }
+            #mainNav.navbar-scrolled .navbar-brand .name,
+            #mainNav.navbar-scrolled .navbar-brand .role,
+            #mainNav.navbar-scrolled .navbar-nav .nav-link {
+                color: #212529 !important; /* Texto oscuro cuando el fondo es claro */
+                text-shadow: none; /* Elimina la sombra para fondos claros */
+            }
+
+
             .navbar-brand {
-                /* Quitamos text-align: center; ya que por defecto es left en Bootstrap */
-                display: flex; /* Usar flexbox para alinear nombre y rol */
-                flex-direction: column; /* Apilar nombre y rol verticalmente */
-                align-items: flex-start; /* Alinear el texto a la izquierda dentro de su contenedor */
-                padding: 0; /* Asegurarse de que no haya padding extra que afecte la alineación */
-                margin-right: auto; /* Empuja los elementos de navegación a la derecha */
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; /* Alineado a la izquierda */
+                padding: 0;
+                margin-right: auto; /* Empuja la navegación a la derecha */
+                line-height: 1.2; /* Ajuste para un espaciado más compacto entre líneas */
             }
 
             .navbar-brand .name {
-                color: #ffffff; /* Blanco puro para un alto contraste */
-                font-size: 2.5rem; /* Tamaño de fuente para el nombre */
-                font-weight: 800; /* Extra bold para que resalte más */
-                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada para pop-out */
-                line-height: 1; /* Eliminar espacio extra si lo hubiera */
-                font-family: 'Merriweather Sans', sans-serif; /* Usar la fuente del header */
+                color: #e0e0e0; /* Un blanco roto suave */
+                font-size: 2.1rem; /* Reducido para mejor proporción con la navegación */
+                font-weight: 800; /* Bold para impacto */
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra sutil y definida */
+                font-family: 'Merriweather Sans', sans-serif;
             }
 
             .navbar-brand .role {
-                color: #d1d1d1; /* Un gris muy claro para el rol */
-                font-size: 1.1rem; /* Tamaño de fuente para el rol, un poco más pequeño que el nombre */
-                margin-top: 5px; /* Separar el rol del nombre */
-                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para el rol */
-                font-family: 'Merriweather Sans', sans-serif; /* Usar la misma fuente para consistencia */
+                color: #c0c0c0; /* Gris claro que complementa el nombre */
+                font-size: 0.95rem; /* Reducido para subcategoría */
+                margin-top: 2px; /* Reducir la separación con el nombre */
+                letter-spacing: 0.05em; /* Un poco de espaciado entre letras */
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra más sutil */
+                font-family: 'Merriweather Sans', sans-serif;
             }
 
-            /* Ajustes para la navegación en general para que todo el header se vea mejor */
+            /* Asegurar que la navegación se vea bien */
             .navbar-nav .nav-link {
-                color: #ffffff !important; /* Asegurar que los links de navegación sean blancos */
-                font-weight: 700; /* Hacer los links de navegación bold */
-                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil también en los links */
-                transition: color 0.3s ease; /* Transición suave al hover */
+                color: #ffffff !important; /* Blanco puro para contraste */
+                font-weight: 600; /* Menos bold que el nombre pero aún fuerte */
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra sutil en los links */
+                transition: color 0.3s ease;
+                padding: 0.5rem 1rem; /* Aumentar el padding para que los enlaces no se vean tan "pegados" */
+                font-size: 1.05rem; /* Ligeramente más grande para que coincida mejor con el nombre */
             }
 
             .navbar-nav .nav-link:hover {
                 color: #f4623a !important; /* Color de acento de Bootstrap al hover */
             }
 
-            /* Media queries para ajustes en pantallas más pequeñas */
+            /* --- Media Queries para Responsividad --- */
             @media (max-width: 991.98px) { /* Para pantallas de tablets y móviles */
+                #mainNav {
+                    background-color: rgba(0, 0, 0, 0.9); /* Más opaco para móviles */
+                }
                 .navbar-brand {
-                    align-items: center; /* Centrar el texto en pantallas pequeñas si es necesario */
-                    width: 100%; /* Ocupar el ancho completo para centrar */
+                    align-items: center; /* Centrar el texto en móviles */
+                    width: 100%;
                 }
                 .navbar-brand .name {
-                    font-size: 2rem; /* Reducir tamaño del nombre en móviles */
+                    font-size: 1.8rem; /* Reducir tamaño del nombre en móviles */
                 }
                 .navbar-brand .role {
-                    font-size: 1rem; /* Reducir tamaño del rol en móviles */
-                }
-                #mainNav {
-                    background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo más opaco en móviles para mejor legibilidad */
+                    font-size: 0.85rem; /* Reducir tamaño del rol en móviles */
                 }
                 .navbar-collapse {
-                    background-color: rgba(0, 0, 0, 0.9); /* Fondo para el menú colapsado */
+                    background-color: rgba(0, 0, 0, 0.95); /* Fondo casi sólido para el menú colapsado */
                     padding: 15px;
+                    border-radius: 5px; /* Bordes ligeramente redondeados */
+                    margin-top: 10px; /* Separación del botón de colapso */
                 }
                 .navbar-nav .nav-link {
-                    color: #ffffff !important; /* Asegurar que los links se vean bien en el menú colapsado */
+                    color: #ffffff !important;
+                    text-align: center; /* Centrar los links del menú colapsado */
+                    padding: 10px 0; /* Padding vertical para los links en el menú colapsado */
+                    font-size: 1rem;
                 }
+            }
+
+            /* Ajustes para el texto principal del masthead para que haya coherencia */
+            .masthead h1 {
+                font-size: 3rem; /* Ajuste del tamaño del H1 principal para que se vea más en sintonía */
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Una sombra para el H1 también */
+            }
+            .masthead p {
+                font-size: 1.25rem; /* Ajuste del tamaño del párrafo */
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra para el párrafo */
             }
         </style>
     </head>
@@ -87,7 +119,9 @@
                     <div class="name">Jose Acosta</div>
                     <div class="role">Quantitative Developer | Data Scientist</div>
                 </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
