@@ -5,42 +5,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
+        <title>Creative - Jose Acosta</title> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            /* Estilo mejorado para la navbar */
-            .navbar-brand {
-                text-align: center;
-                color: #343a40;
-                font-size: 2.5rem; /* Aumentar tamaño del nombre */
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra sutil */
+            /* Mejoras para la sección del nombre y rol en la navbar */
+            #mainNav {
+                background-color: rgba(0, 0, 0, 0.4); /* Un ligero overlay oscuro para mejorar el contraste del texto sobre la imagen */
             }
 
-            .navbar-brand .role {
-                color: #6c757d; /* Color más suave para el rol */
-                font-size: 1.3rem; /* Aumentar el tamaño del texto del rol */
-                margin-top: 5px; /* Separar el rol del nombre */
+            .navbar-brand {
+                /* Quitamos text-align: center; ya que por defecto es left en Bootstrap */
+                display: flex; /* Usar flexbox para alinear nombre y rol */
+                flex-direction: column; /* Apilar nombre y rol verticalmente */
+                align-items: flex-start; /* Alinear el texto a la izquierda dentro de su contenedor */
+                padding: 0; /* Asegurarse de que no haya padding extra que afecte la alineación */
+                margin-right: auto; /* Empuja los elementos de navegación a la derecha */
             }
 
             .navbar-brand .name {
-                color: #343a40;
-                font-weight: bold;
-                font-size: 2.5rem;
+                color: #ffffff; /* Blanco puro para un alto contraste */
+                font-size: 2.5rem; /* Tamaño de fuente para el nombre */
+                font-weight: 800; /* Extra bold para que resalte más */
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada para pop-out */
+                line-height: 1; /* Eliminar espacio extra si lo hubiera */
+                font-family: 'Merriweather Sans', sans-serif; /* Usar la fuente del header */
+            }
+
+            .navbar-brand .role {
+                color: #d1d1d1; /* Un gris muy claro para el rol */
+                font-size: 1.1rem; /* Tamaño de fuente para el rol, un poco más pequeño que el nombre */
+                margin-top: 5px; /* Separar el rol del nombre */
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para el rol */
+                font-family: 'Merriweather Sans', sans-serif; /* Usar la misma fuente para consistencia */
+            }
+
+            /* Ajustes para la navegación en general para que todo el header se vea mejor */
+            .navbar-nav .nav-link {
+                color: #ffffff !important; /* Asegurar que los links de navegación sean blancos */
+                font-weight: 700; /* Hacer los links de navegación bold */
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil también en los links */
+                transition: color 0.3s ease; /* Transición suave al hover */
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #f4623a !important; /* Color de acento de Bootstrap al hover */
+            }
+
+            /* Media queries para ajustes en pantallas más pequeñas */
+            @media (max-width: 991.98px) { /* Para pantallas de tablets y móviles */
+                .navbar-brand {
+                    align-items: center; /* Centrar el texto en pantallas pequeñas si es necesario */
+                    width: 100%; /* Ocupar el ancho completo para centrar */
+                }
+                .navbar-brand .name {
+                    font-size: 2rem; /* Reducir tamaño del nombre en móviles */
+                }
+                .navbar-brand .role {
+                    font-size: 1rem; /* Reducir tamaño del rol en móviles */
+                }
+                #mainNav {
+                    background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo más opaco en móviles para mejor legibilidad */
+                }
+                .navbar-collapse {
+                    background-color: rgba(0, 0, 0, 0.9); /* Fondo para el menú colapsado */
+                    padding: 15px;
+                }
+                .navbar-nav .nav-link {
+                    color: #ffffff !important; /* Asegurar que los links se vean bien en el menú colapsado */
+                }
             }
         </style>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">
@@ -58,7 +98,6 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -73,7 +112,6 @@
                 </div>
             </div>
         </header>
-        <!-- About-->
         <section class="page-section bg-primary" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -86,7 +124,6 @@
                 </div>
             </div>
         </section>
-        <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
                 <h2 class="text-center mt-0">At Your Service</h2>
@@ -123,7 +160,6 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio-->
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
@@ -157,14 +193,12 @@
                 </div>
             </div>
         </div>
-        <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
         </section>
-        <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -176,7 +210,6 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- Formulario de contacto -->
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
