@@ -204,9 +204,9 @@ nav .logo img {
 nav ul {
     margin-top: 10px;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 10px;
     list-style-type: none;
-    height: calc(100% - 60px);
+    height: calc(80% - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
