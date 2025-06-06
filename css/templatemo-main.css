@@ -203,21 +203,17 @@ nav .logo img {
 }
 
 nav ul {
-	margin-top: 60px;
-  	text-align: left;
-  	margin-left: 40px;
-  	list-style-type: none;
-  	height: 48vh;
-  	display: -webkit-box;
-  	display: -ms-flexbox;
-  	display: flex;
-  	-webkit-box-orient: vertical;
-  	-webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    margin-top: 60px;
+    text-align: left;
+    margin-left: 40px;
+    list-style-type: none;
+    height: calc(100% - 60px);
+    display: flex;
     flex-direction: column;
-  	-ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 24px;
 }
+
 nav ul li {
 	margin: 25px 0px;
 }
