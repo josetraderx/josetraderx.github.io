@@ -210,7 +210,7 @@ nav ul {
     height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 24px;
 }
 
