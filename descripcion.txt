@@ -1,0 +1,28 @@
+<div class="item item-1">
+  <div class="img-fill">
+      <div class="text-content">
+        <h6>Data-Driven Financial Expert</h6>
+        <h4>Turning Data Into Actionable Insights</h4>
+        <p>Experienced in building and deploying algorithmic trading strategies, financial models, and AI-powered analytics. Skilled in translating complex data into actionable insights for financial markets and portfolio management.</p>
+      </div>
+  </div>
+</div>
+          <!-- // Item -->
+          <!-- Item -->
+<div class="item item-2">
+  <div class="img-fill">
+      <div class="text-content">
+        <h6>Data Engineering & Analytics</h6>
+        <h4>Building Advanced Trading Solutions for Financial Markets</h4>
+        <p>Specializing in designing robust data pipelines, automating ETL processes, and creating advanced dashboards. Proficient in SQL, Python, and modern cloud platforms to enable business intelligence and strategic decision-making.</p>
+      </div>
+  </div>
+</div>
+          <!-- // Item -->
+          <!-- Item -->
+<div class="item item-3">
+  <div class="img-fill">
+      <div class="text-content">
+        <h6>Algorithmic Trading & Market Strategies</h6>
+        <h4>Developing Robust Algorithmic Solutions</h4>
+        <p>Expertise in developing, testing, and deploying automated trading systems for global financial markets. Focused on quantitative research, risk management, and building robust algorithmic solutions for equities, crypto, and derivatives.</p>

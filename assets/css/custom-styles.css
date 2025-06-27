@@ -1,0 +1,899 @@
+/* Custom styles for stronger text appearance */
+.more-info .more-info-content .right-content p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.more-info .more-info-content .right-content p:first-of-type {
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* Nav item padding adjustment */
+.navbar .navbar-nav .nav-item {
+    margin: 0px 20px;
+    padding: 0;
+}
+
+.navbar .navbar-nav a.nav-link {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+    transition: all 0.5s;
+    margin-top: 0;
+    padding: 25px 15px 20px 15px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Hover effect for nav items */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link,
+.navbar .navbar-nav .nav-link.current,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .show>.nav-link {
+    color: #a4c639 !important;
+    border-bottom: 4px solid #a4c639;
+}
+
+/* Add emphasis to key phrases */
+.more-info .right-content strong {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Make headings more prominent */
+.more-info .right-content h2 {
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.more-info .right-content span {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+/* Clean About Me section styling */
+.page-heading h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Original slider text styles restored */
+.Modern-Slider .item h4 {
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    margin: 0px;
+}
+
+.Modern-Slider .item h6 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #a4c639;
+}
+
+.Modern-Slider .item p {
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+/* Specific style for the second slide button */
+.Modern-Slider .item-2 .slide-button {
+    margin-top: -30px !important; /* Move the button up by 30px only in the second slide */
+    position: relative;
+    display: inline-block;
+}
+
+.page-heading h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    transition: transform 0.3s ease;
+    transform: scaleX(0.7);
+}
+
+.page-heading h1:hover:after {
+    transform: scaleX(1);
+}
+
+.page-heading span {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.5);
+    padding: 25px 35px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: all 0.3s ease;
+}
+
+.page-heading span:hover {
+    transform: translateY(-5px);
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.page-heading span strong {
+    color: #4CAF50;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    transition: color 0.3s ease;
+}
+
+.page-heading span strong:hover {
+    color: #45a049;
+}
+
+/* Hide the empty div section below testimonials */
+.testimonials + div,
+.testimonials + div + div,
+.testimonials + div img {
+    display: none !important;
+}
+
+/* Elegant service styling */
+.service-item {
+    margin-bottom: 50px !important;
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.service-item:hover {
+    transform: translateY(-5px) !important;
+}
+
+.service-item .down-content {
+    padding: 40px !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(164, 198, 57, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.service-item:hover .down-content {
+    box-shadow: 0 15px 40px rgba(164, 198, 57, 0.15) !important;
+}
+
+.service-item .down-content h4 {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    color: #1a202c !important;
+    letter-spacing: -0.5px !important;
+    position: relative !important;
+    padding-bottom: 15px !important;
+}
+
+.service-item .down-content h4:after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 60px !important;
+    height: 3px !important;
+    background: linear-gradient(to right, #a4c639, #8ba832) !important;
+    border-radius: 2px !important;
+}
+
+.service-item .down-content p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #4a5568 !important;
+    margin-bottom: 30px !important;
+    letter-spacing: 0.2px !important;
+    font-weight: 400 !important;
+}
+
+.service-item .down-content ul {
+    padding-left: 20px !important;
+    margin-bottom: 25px !important;
+}
+
+.service-item .down-content li {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    color: #444 !important;
+    margin-bottom: 12px !important;
+    position: relative !important;
+    padding-left: 15px !important;
+}
+
+.service-item .down-content li:before {
+    content: "•" !important;
+    position: absolute !important;
+    left: -5px !important;
+    color: #a4c639 !important;
+}
+
+.service-item .down-content strong {
+    font-weight: 600 !important;
+    color: #1e1e1e !important;
+}
+
+/* Enhanced methodology section styling */
+.service-item .methodology {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+    padding: 30px 35px !important;
+    border-radius: 10px !important;
+    margin: 30px 0 !important;
+    border: 1px solid rgba(164, 198, 57, 0.15) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.service-item .methodology:before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 4px !important;
+    height: 100% !important;
+    background: linear-gradient(to bottom, #a4c639, #8ba832) !important;
+    border-radius: 4px 0 0 4px !important;
+}
+
+.service-item .methodology:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    transform: translateY(-2px) !important;
+    border-color: #cbd5e0 !important;
+}
+
+.service-item .methodology li:hover {
+    color: #1a202c !important;
+    transform: translateX(2px) !important;
+    transition: all 0.2s ease !important;
+}
+
+.service-item .methodology li:hover:before {
+    transform: translateX(2px) !important;
+    transition: transform 0.2s ease !important;
+}
+
+.service-item .methodology h5 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1e1e1e !important;
+    margin-bottom: 15px !important;
+}
+
+.service-item .methodology ul {
+    columns: 2 !important;
+    column-gap: 30px !important;
+    margin-top: 15px !important;
+}
+
+.service-item .methodology li {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 12px !important;
+    break-inside: avoid !important;
+    color: #2d3748 !important;
+    position: relative !important;
+    padding-left: 20px !important;
+}
+
+.service-item .methodology li:before {
+    content: "→" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #a4c639 !important;
+    font-weight: bold !important;
+}
+
+.service-item .sub-heading {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #444 !important;
+    margin: 20px 0 10px !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* Technical terms and statistics styling */
+.service-item .tech-term {
+    color: #2c5282 !important;
+    font-weight: 600 !important;
+    font-family: "Consolas", monospace !important;
+    font-size: 14px !important;
+    background: #f0f4f8 !important;
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+    display: inline-block !important;
+}
+
+.service-item .statistic {
+    color: #2d3748 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    background: #ebf8ff !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    margin: 0 2px !important;
+    display: inline-block !important;
+    border-bottom: 2px solid #4299e1 !important;
+}
+
+.service-item .key-feature {
+    font-weight: 600 !important;
+    color: #2d3748 !important;
+    border-bottom: 2px solid #a4c639 !important;
+    padding-bottom: 1px !important;
+}
+
+/* Enhanced Services Tabs Styling */
+#tabs ul li a {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    color: #333333 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 20px 25px !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04) !important;
+}
+
+#tabs ul li a:hover,
+#tabs ul .ui-tabs-active a {
+    background: transparent !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    border-bottom: 3px solid #000000 !important;
+    box-shadow: none !important;
+}
+
+#tabs ul li a i {
+    transition: transform 0.3s ease !important;
+}
+
+#tabs ul li a:hover i {
+    transform: translateX(5px) !important;
+}
+
+.tabs-content {
+    background: #ffffff !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05) !important;
+    margin-left: 20px !important;
+}
+
+.tabs-content h4 {
+    color: #1a202c !important;
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 3px solid #000000 !important;
+    display: inline-block !important;
+}
+
+.tabs-content p {
+    color: #4a5568 !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 20px !important;
+}
+
+.tabs-content ul {
+    margin: 20px 0 !important;
+    padding-left: 20px !important;
+}
+
+.tabs-content ul li {
+    color: #2d3748 !important;
+    font-size: 15px !important;
+    margin-bottom: 12px !important;
+    position: relative !important;
+    padding-left: 20px !important;
+}
+
+.tabs-content ul li:before {
+    content: "→" !important;
+    position: absolute !important;
+    left: -5px !important;
+    color: #a4c639 !important;
+}
+
+.tabs-content img {
+    border-radius: 8px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Enhanced Tabs Layout */
+.single-services {
+    padding: 50px 0;
+    background: #f8f9fa !important;
+}
+
+.single-services #tabs ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+
+#tabs ul li a {
+    position: relative !important;
+    padding: 20px 30px !important;
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    color: #2d3748 !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+#tabs ul li a:hover,
+#tabs ul .ui-tabs-active a {
+    background: linear-gradient(135deg, #a4c639 0%, #8ba832 100%) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 15px rgba(164, 198, 57, 0.2) !important;
+    transform: translateX(10px) !important;
+}
+
+#tabs ul li a i {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    transition: transform 0.3s ease !important;
+}
+
+#tabs ul li a:hover i,
+#tabs ul .ui-tabs-active a i {
+    transform: translate(5px, -50%) !important;
+    color: #fff !important;
+}
+
+/* Testimonials scroll effect */
+.testimonials-scroll {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.testimonials-track {
+    display: flex;
+    animation: scroll-testimonials 40s linear infinite;
+    width: calc(320px * 8); /* 4 items x 2 for duplicates */
+}
+
+.testimonials-scroll .testimonial-item {
+    flex: 0 0 auto;
+    width: 320px;
+    padding: 0 15px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.testimonials-scroll .testimonial-item .inner-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-scroll .testimonial-item .inner-content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.testimonials-scroll .testimonial-item .inner-content span {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.testimonials-scroll .testimonial-item .inner-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.testimonials-scroll .testimonial-item:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+@keyframes scroll-testimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 4)); /* Move back 4 items */
+    }
+}
+
+.testimonials-scroll:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+/* Custom styles for Tools & Platforms section */
+.tools-platforms-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.tools-platforms-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.tools-platforms-title h2:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, #a4c639, #45a049);
+    bottom: 0;
+    left: 20%;
+    border-radius: 2px;
+}
+
+.logos-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.logos-scroll {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.logos-scroll:last-child {
+    margin-bottom: 0;
+}
+
+.logos-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(250px * 10);
+}
+
+.logos-scroll.reverse .logos-track {
+    animation-direction: reverse;
+}
+
+.partner-scroll-item {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+    padding: 15px;
+    margin: 0 25px;
+}
+
+.partner-scroll-item img {
+    max-width: 80%;
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.partner-scroll-item:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.logos-scroll:hover .logos-track {
+    animation-play-state: paused;
+}
+
+/* Additional responsive styles for testimonials */
+@media (max-width: 1200px) {
+    .testimonials-scroll .testimonial-item {
+        width: 300px;
+    }
+    
+    .testimonials-track {
+        width: calc(300px * 8);
+    }
+    
+    @keyframes scroll-testimonials {
+        100% {
+            transform: translateX(calc(-300px * 4));
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar .navbar-nav a.nav-link {
+        padding: 15px 10px;
+    }
+    
+    .single-services {
+        padding: 30px 0 !important;
+    }
+    
+    .single-services #tabs ul {
+        margin-bottom: 30px !important;
+    }
+    
+    .tabs-content {
+        margin-left: 0 !important;
+        padding: 25px !important;
+    }
+    
+    #tabs ul li a {
+        padding: 15px 20px !important;
+        font-size: 15px !important;
+    }
+    
+    .tabs-content h4 {
+        font-size: 20px !important;
+    }
+    .logos-track {
+        animation: scroll 25s linear infinite;
+    }
+    .partner-scroll-item {
+        width: 200px;
+        height: 100px;
+        margin: 0 20px;
+    }
+    .partner-scroll-item img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-nav a.nav-link {
+        padding: 10px 5px;
+    }
+    
+    .single-services {
+        padding: 20px 0 !important;
+    }
+    
+    #tabs ul li a {
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+    }
+    
+    .tabs-content {
+        padding: 20px !important;
+    }
+    
+    .tabs-content img {
+        margin-bottom: 15px !important;
+    }
+    
+    .tabs-content h4 {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .tabs-content p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+    .logos-track {
+        animation: scroll 20s linear infinite;
+    }
+    .partner-scroll-item {
+        width: 150px;
+        height: 80px;
+        margin: 0 15px;
+    }
+    .partner-scroll-item img {
+        max-height: 50px;
+    }
+    .tools-platforms-title h2 {
+        font-size: 28px;
+    }
+
+    .testimonials-scroll .testimonial-item {
+        width: 300px;
+        padding: 0 15px;
+    }
+    
+    .testimonials-track {
+        width: calc(300px * 8);
+    }
+    
+    @keyframes scroll-testimonials {
+        100% {
+            transform: translateX(calc(-300px * 4));
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-scroll .testimonial-item {
+        width: 280px;
+        padding: 0 10px;
+    }
+    
+    .testimonials-track {
+        width: calc(280px * 8);
+    }
+    
+    @keyframes scroll-testimonials {
+        100% {
+            transform: translateX(calc(-280px * 4));
+        }
+    }
+}
+
+/* Portfolio Items Styling */
+.portfolio-items {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.portfolio-content {
+    padding: 25px;
+}
+
+.portfolio-content h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.portfolio-content h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #a4c639, #8ba832);
+    border-radius: 2px;
+}
+
+.portfolio-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack li {
+    font-size: 14px;
+    padding: 6px 12px;
+    background: #f0f4f8;
+    color: #2c5282;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-stack li:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .portfolio-items {
+        padding: 40px 0;
+    }
+    
+    .portfolio-content h4 {
+        font-size: 20px;
+    }
+    
+    .portfolio-content p {
+        font-size: 14px;
+    }
+    
+    .tech-stack li {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+/* Custom styling for the CONTACT button on green background */
+.request-form a.border-button.contact-green {
+    font-size: 1.3rem;
+    padding: 14px 40px;
+    font-weight: 700;
+    color: #000000;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.request-form a.border-button.contact-green:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
