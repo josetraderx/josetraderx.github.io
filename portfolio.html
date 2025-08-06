@@ -195,15 +195,18 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="portfolio-item">
-              <img src="assets/images/projects/crypto-dashboard.jpg" alt="Crypto Dashboard" class="img-fluid">
+              <img src="assets/images/projects/code-sample.jpg" alt="Mean Reversion OU Trading Bot" class="img-fluid">
               <div class="portfolio-content">
-                <h4>Crypto Analytics Dashboard</h4>
-                <p>Real-time cryptocurrency trading dashboard with market sentiment analysis and automated trading signals.</p>
+                <h4>Mean Reversion OU Trading Bot</h4>
+                <p>Automated trading bot that exploits mean-reversion in asset prices using the Ornstein-Uhlenbeck (OU) process for optimal entry and exit points.</p>
                 <ul class="tech-stack">
                   <li>Python</li>
-                  <li>React</li>
-                  <li>WebSocket</li>
-                  <li>MongoDB</li>
+                  <li>Pandas</li>
+                  <li>NumPy</li>
+                  <li>SciPy</li>
+                  <li>Matplotlib</li>
+                  <li>yfinance</li>
+                  <li>Docker</li>
                 </ul>
                 <a href="#" class="filled-button" data-modal="modal1">Learn More</a>
               </div>
@@ -299,19 +302,23 @@
     <div id="modal1" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h4>Crypto Analytics Dashboard</h4>
-        <p><strong>Objective:</strong> To develop a real-time cryptocurrency trading dashboard that provides actionable insights through market sentiment analysis and automated trading signals.</p>
-        <p><strong>Methodology:</strong> The system ingests real-time data from multiple cryptocurrency exchanges and social media sources. It uses natural language processing (NLP) to analyze market sentiment and a set of predefined rules to generate trading signals. The front-end is a responsive React application that visualizes the data and signals.</p>
-        <p><strong>Results:</strong> The dashboard provides a comprehensive overview of the crypto market, helping users make informed trading decisions. The automated signals have shown a consistent profitability rate in backtesting.</p>
-        <p><strong>Challenges:</strong> The main challenges were handling the high volume of real-time data and developing an accurate sentiment analysis model.</p>
+        <h4>Mean Reversion OU Trading Bot</h4>
+        <p><strong>Objective:</strong> Develop an automated trading bot that identifies and exploits mean-reversion opportunities in financial markets using the Ornstein-Uhlenbeck (OU) process.</p>
+        <p><strong>Methodology:</strong> The bot continuously ingests real-time price data, estimates OU process parameters, and generates trading signals when prices deviate significantly from the modeled mean. Position sizing adapts to the strength of the signal, and all trades are simulated and visualized for performance review. The entire pipeline is containerized for robust, 24/7 operation.</p>
+        <p><strong>Results:</strong> The strategy consistently delivered positive results in backtesting, demonstrating robust performance across multiple assets. Achieved a Sharpe ratio of 0.94, indicating strong risk-adjusted returns.</p>
+        <p><strong>Challenges:</strong> Key challenges included maintaining estimator robustness during market regime shifts, ensuring fault tolerance for continuous operation, and balancing execution speed with statistical confidence.</p>
         <h5>Technologies Used:</h5>
         <ul>
-          <li>Python (for data processing and analysis)</li>
-          <li>React (for the front-end dashboard)</li>
-          <li>WebSocket (for real-time data streaming)</li>
-          <li>MongoDB (for data storage)</li>
+          <li>Python</li>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>SciPy</li>
+          <li>Matplotlib</li>
+          <li>yfinance</li>
+          <li>Docker</li>
+          <li>Jupyter/Binder/Colab</li>
         </ul>
-        <a href="https://github.com/josetraderx/Financial-Data-Pipeline" class="filled-button" target="_blank">View on GitHub</a>
+        <a href="https://github.com/josetraderx/Mean_Reversion_OU" class="filled-button" target="_blank">View on GitHub</a>
       </div>
     </div>
 
