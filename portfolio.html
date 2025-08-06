@@ -278,13 +278,14 @@
             <div class="portfolio-item">
               <img src="assets/images/projects/feature-engineering.jpg" alt="Feature Engineering Pipeline" class="img-fluid">
               <div class="portfolio-content">
-                <h4>Feature Engineering Pipeline</h4>
-                <p>Automated feature generation and selection pipeline for financial time series prediction.</p>
+                <h4>ETL Automation Pipeline</h4>
+                <p>Convert raw, high-frequency market data into fully automated, trustworthy datasets for trading and analytics.</p>
                 <ul class="tech-stack">
                   <li>Python</li>
-                  <li>Spark</li>
-                  <li>AWS</li>
-                  <li>Airflow</li>
+                  <li>Pandas</li>
+                  <li>PostgreSQL/TimescaleDB</li>
+                  <li>Git</li>
+                  <li>Docker</li>
                 </ul>
                 <a href="#" class="filled-button" data-modal="modal6">Learn More</a>
               </div>
@@ -310,7 +311,7 @@
           <li>WebSocket (for real-time data streaming)</li>
           <li>MongoDB (for data storage)</li>
         </ul>
-        <a href="https://github.com/josetraderx" class="filled-button" target="_blank">View on GitHub</a>
+        <a href="https://github.com/josetraderx/Financial-Data-Pipeline" class="filled-button" target="_blank">View on GitHub</a>
       </div>
     </div>
 
@@ -329,7 +330,7 @@
           <li>Pandas</li>
           <li>Scikit-learn</li>
         </ul>
-        <a href="https://github.com/josetraderx" class="filled-button" target="_blank">View on GitHub</a>
+        <a href="https://github.com/josetraderx/Financial-Data-Pipeline" class="filled-button" target="_blank">View on GitHub</a>
       </div>
     </div>
 
@@ -394,19 +395,21 @@
     <div id="modal6" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h4>Feature Engineering Pipeline</h4>
-        <p><strong>Objective:</strong> To automate the process of feature engineering for financial machine learning models.</p>
-        <p><strong>Methodology:</strong> The pipeline takes raw financial data as input and generates a rich set of features using various transformation techniques. It also includes a feature selection module that selects the most predictive features for a given model.</p>
-        <p><strong>Results:</strong> The feature engineering pipeline has significantly reduced the time and effort required to develop new machine learning models. It has also improved the performance of the models by providing them with high-quality features.</p>
-        <p><strong>Challenges:</strong> The main challenge was to design a flexible and extensible pipeline that can support a wide range of feature engineering techniques and be easily integrated with different machine learning models.</p>
+        <h4>ETL Automation Pipeline</h4>
+        <p><strong>Objective:</strong> Convert raw, high-frequency market data into fully automated, trustworthy datasets for trading and analytics.</p>
+        <p><strong>Methodology:</strong> Ingest, cleanse, and load streaming data with Python + Pandas into PostgreSQL/TimescaleDB, applying record-level validation that assigns quality scores and triggers real-time alerts.</p>
+        <p><strong>Results:</strong> Reduced manual data-prep time by 90 %, eliminated downstream schema errors, and boosted model stability and back-test accuracy.</p>
+        <p><strong>Challenges:</strong> Balancing millisecond-level latency with fault tolerance, and designing flexible validation rules that evolve with new asset classes.</p>
+        <p><strong>Rapid Deployment:</strong> Containerized with Docker and modular scripts; can be rolled out in minutes, on-prem or in the cloud.</p>
         <h5>Technologies Used:</h5>
         <ul>
           <li>Python</li>
-          <li>Spark</li>
-          <li>AWS</li>
-          <li>Airflow</li>
+          <li>Pandas</li>
+          <li>PostgreSQL/TimescaleDB</li>
+          <li>Git</li>
+          <li>Docker</li>
         </ul>
-        <a href="https://github.com/josetraderx" class="filled-button" target="_blank">View on GitHub</a>
+        <a href="https://github.com/josetraderx/Financial-Data-Pipeline" class="filled-button" target="_blank">View on GitHub</a>
       </div>
     </div>
 
