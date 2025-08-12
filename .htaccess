@@ -1,0 +1,124 @@
+#==============================================================================
+# 1. HSTS (HTTP Strict Transport Security)
+#==============================================================================
+# Fuerza a los navegadores a usar siempre HTTPS, mejorando la seguridad.
+# La directiva 'preload' es para enviar el sitio a las listas de precarga de los navegadores.
+# Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+#==============================================================================
+# 2. SECURITY HEADERS (Cabeceras de Seguridad)
+#==============================================================================
+# Ayudan a proteger el sitio contra ataques comunes como XSS y clickjacking.
+
+# X-Frame-Options: Evita que tu sitio sea incrustado en iframes en otros dominios.
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# X-Content-Type-Options: Evita que el navegador intente adivinar el tipo MIME de un recurso.
+Header always set X-Content-Type-Options "nosniff"
+
+# Referrer-Policy: Controla qué información de referencia se envía con las solicitudes.
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Permissions-Policy: Controla qué características del navegador puede usar el sitio.
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Content-Security-Policy (CSP): Define de dónde se pueden cargar los recursos.
+# Esta es una política ESTRICTA. Asegúrate de que todos tus recursos (scripts, estilos, fuentes)
+# estén incluidos aquí. De lo contrario, serán bloqueados por el navegador.
+# Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
+
+
+#==============================================================================
+# 3. BROWSER CACHING (Política de Caché)
+#==============================================================================
+# Indica a los navegadores cuánto tiempo deben guardar los archivos en la caché local.
+# Esto reduce drásticamente los tiempos de carga para visitantes recurrentes.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Cache de HTML por 1 hora (para permitir actualizaciones rápidas)
+  ExpiresByType text/html "access plus 1 hours"
+  
+  # Cache de imágenes por 1 año (recursos estáticos)
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+  
+  # Cache de CSS y JavaScript por 1 año
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Cache de fuentes por 1 año
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-truetype "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  
+  # Cache de documentos y archivos multimedia
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType audio/mpeg "access plus 1 month"
+  
+  # Cache de archivos de datos JSON/XML
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# Cache-Control headers para un control más granular
+<IfModule mod_headers.c>
+  # Archivos estáticos con cache agresivo
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # HTML con cache corto para permitir actualizaciones
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  
+  # Archivos de fuentes con cache largo y preload hints
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header append Vary "Accept-Encoding"
+  </FilesMatch>
+</IfModule>
+
+#==============================================================================
+# 4. COMPRESIÓN GZIP
+#==============================================================================
+# Comprime los recursos antes de enviarlos al navegador, reduciendo el tamaño de la transferencia.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+#==============================================================================
+# 5. Forzar HTTPS
+#==============================================================================
+# Redirige todo el tráfico de HTTP a HTTPS para asegurar la conexión.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

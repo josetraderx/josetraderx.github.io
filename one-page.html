@@ -4,20 +4,46 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+    
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Finance Business HTML5 Template</title>
 
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"></noscript>
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="preload" href="assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/fontawesome.css"></noscript>
+    <link rel="preload" href="assets/css/templatemo-finance-business.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/templatemo-finance-business.css"></noscript>
+    <link rel="preload" href="assets/css/owl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/owl.css"></noscript>
+
+    <style>
+      /* CSS crítico para above-the-fold */
+      body { font-family: 'Roboto', sans-serif; margin: 0; }
+      .header { background: #fff; position: fixed; width: 100%; z-index: 1000; }
+      .main-banner.header-text { height: 100vh; }
+      /* Solo lo visible inicialmente */
+    </style>
 <!--
 
 Finance Business TemplateMo
@@ -25,7 +51,10 @@ Finance Business TemplateMo
 https://templatemo.com/tm-545-finance-business
 
 -->
-  </head>
+  
+    <!-- Security Headers Script -->
+    <script src="assets/js/security-headers.js" defer></script>
+    </head>
 
   <body>
 
@@ -45,16 +74,16 @@ https://templatemo.com/tm-545-finance-business
         <div class="row">
           <div class="col-md-8 col-xs-12">
             <ul class="left-info">
-              <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-17:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
+              <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Mon-Fri 09:00-17:00</a></li>
+              <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>090-080-0760</a></li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>
@@ -71,7 +100,7 @@ https://templatemo.com/tm-545-finance-business
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link current" href="#top">Home
+                <a class="nav-link current" href="#top" aria-current="page">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
@@ -162,7 +191,11 @@ https://templatemo.com/tm-545-finance-business
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/service_01.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/service_01.webp" type="image/webp">
+                <source srcset="assets/images/service_01.jpg" type="image/jpeg">
+                <img src="assets/images/service_01.jpg" alt="" loading="lazy">
+              </picture>
               <div class="down-content">
                 <h4>Digital Currency</h4>
                 <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
@@ -172,7 +205,11 @@ https://templatemo.com/tm-545-finance-business
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/service_02.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/service_02.webp" type="image/webp">
+                <source srcset="assets/images/service_02.jpg" type="image/jpeg">
+                <img src="assets/images/service_02.jpg" alt="" loading="lazy">
+              </picture>
               <div class="down-content">
                 <h4>Market Analysis</h4>
                 <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
@@ -182,7 +219,11 @@ https://templatemo.com/tm-545-finance-business
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/service_03.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/service_03.webp" type="image/webp">
+                <source srcset="assets/images/service_03.jpg" type="image/jpeg">
+                <img src="assets/images/service_03.jpg" alt="" loading="lazy">
+              </picture>
               <div class="down-content">
                 <h4>Historical Data</h4>
                 <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
@@ -246,7 +287,11 @@ https://templatemo.com/tm-545-finance-business
               <div class="row">
                 <div class="col-md-6">
                   <div class="left-image">
-                    <img src="assets/images/more-info.jpg" alt="">
+                    <picture>
+                      <source srcset="assets/images/more-info.webp" type="image/webp">
+                      <source srcset="assets/images/more-info.jpg" type="image/jpeg">
+                      <img src="assets/images/more-info.jpg" alt="" loading="lazy">
+                    </picture>
                   </div>
                 </div>
                 <div class="col-md-6 align-self-center">
@@ -468,7 +513,7 @@ https://templatemo.com/tm-545-finance-business
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p>Copyright &copy; 2020 Financial Business Co., Ltd.
+            <p>Copyright &copy; 2025 JoseTraderX.
             
             - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
           </div>
@@ -477,15 +522,15 @@ https://templatemo.com/tm-545-finance-business
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js" defer></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
     <!-- Additional Scripts -->
-    <script src="assets/js/jquery.singlePageNav.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/jquery.singlePageNav.min.js" defer></script>
+    <script src="assets/js/custom.min.js" defer></script>
+    <script src="assets/js/owl.min.js" defer></script>
+    <script src="assets/js/slick.min.js" defer></script>
+    <script src="assets/js/accordions.min.js" defer></script>
     <script>
       $(function() {
         // Single Page Nav
@@ -509,6 +554,20 @@ https://templatemo.com/tm-545-finance-business
           t.value='';         // with more chance of typos
           t.style.color='#fff';
           }
+      }
+    </script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
       }
     </script>
 

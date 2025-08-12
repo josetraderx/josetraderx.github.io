@@ -14,7 +14,7 @@ body {
 p {
     margin-bottom: 0px;
     font-size: 14px;
-    color: #666666;
+    color: #555555;
     line-height: 30px;
 }
 a {
@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
 
 a.filled-button {
     background-color: #a4c639;
-    color: #fff;
+    color: #232323;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
@@ -88,7 +88,7 @@ a.border-button:hover {
     margin-top: 15px;
     text-transform: uppercase;
     font-size: 15px;
-    color: #666;
+    color: #555;
     letter-spacing: 1px;
 }
 
@@ -484,15 +484,15 @@ header .navbar {
 }
 
 .Modern-Slider .item-1 .img-fill {
-    background-image: url(../images/slide_01.jpg);
+    background-image: url(../images/slide_01.webp);
 }
 
 .Modern-Slider .item-2 .img-fill {
-    background-image: url(../images/slide_02.jpg);
+    background-image: url(../images/slide_02.webp);
 }
 
 .Modern-Slider .item-3 .img-fill {
-    background-image: url(../images/slide_03.jpg);
+    background-image: url(../images/slide_03.webp);
 }
 
 .Modern-Slider .NextArrow{
@@ -635,7 +635,7 @@ ul.slick-dots {
 
 .Modern-Slider .item a.filled-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: #7b9b29;
 }
 
 .Modern-Slider .item.slick-active h6{
@@ -819,8 +819,9 @@ ul.slick-dots {
 }
 
 .service-item img {
-    width: 100%;
-    overflow: hidden;
+  width: 350px;
+  height: 236px;
+  object-fit: cover;
 }
 
 .service-item .down-content {
@@ -937,7 +938,7 @@ ul.slick-dots {
 .more-info .right-content span {
     text-transform: uppercase;
     font-size: 15px;
-    color: #666;
+    color: #555;
     letter-spacing: 1px;
     margin-bottom: 10px;
     display: block;
@@ -1285,7 +1286,7 @@ footer .contact-form button.filled-button {
 
 footer .contact-form button.filled-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: #7b9b29;
 }
 
 /* Sub-footer Style */
@@ -1783,4 +1784,98 @@ html, body {
 .sub-header ul.right-icons li {
     display: inline-block;
     margin: 0 12px; /* Increased margin to 12px left/right for more spacing */
+}
+
+/* Accessible focus state */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4299e1 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.6) !important;
+  transition: outline 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Portfolio Items Styling */
+.portfolio-items {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.portfolio-content {
+    padding: 25px;
+}
+
+.portfolio-content h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.portfolio-content h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #a4c639, #8ba832);
+    border-radius: 2px;
+}
+
+.portfolio-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack li {
+    font-size: 14px;
+    padding: 6px 12px;
+    background: #f0f4f8;
+    color: #2c5282;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-stack li:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
 }

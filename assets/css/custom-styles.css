@@ -791,6 +791,7 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     height: 100%;
+    margin-bottom: 30px;
 }
 
 .portfolio-item:hover {
@@ -860,25 +861,6 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .portfolio-items {
-        padding: 40px 0;
-    }
-    
-    .portfolio-content h4 {
-        font-size: 20px;
-    }
-    
-    .portfolio-content p {
-        font-size: 14px;
-    }
-    
-    .tech-stack li {
-        font-size: 13px;
-        padding: 5px 10px;
-    }
-}
-
 /* Custom styling for the CONTACT button on green background */
 .request-form a.border-button.contact-green {
     font-size: 1.3rem;
@@ -896,4 +878,73 @@
     color: #000000;
     border-color: #ffffff;
     transform: scale(1.05);
+}
+
+/* Accessible focus state */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4299e1;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.6);
+  transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Mobile-first responsive styles */
+:root {
+  --maxw: 72rem;
+  --pad: 1rem;
+  --fs-base: clamp(16px, 1.6vw, 18px);
+  --fs-h1: clamp(28px, 5vw, 44px);
+}
+body { 
+  font-size: var(--fs-base); 
+  line-height: 1.55; 
+}
+.container { 
+  max-width: var(--maxw); 
+  margin: 0 auto; 
+  padding-inline: var(--pad); 
+}
+.grid { 
+  display: grid; 
+  gap: 1rem; 
+  grid-template-columns: 1fr; 
+}
+
+/* breakpoints progresivos */
+@media (min-width: 640px){ 
+  .grid { 
+    grid-template-columns: 1fr 1fr; 
+  } 
+}
+@media (min-width: 1024px){ 
+  .grid { 
+    grid-template-columns: repeat(3,1fr); 
+  } 
+}
+
+/* Ensure minimum touch target size for buttons, social icons, and navigation links */
+.filled-button,
+.border-button {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+}
+
+.social-icons li a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar-nav a.nav-link {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
 }

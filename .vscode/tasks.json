@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Verify Security Headers",
+			"type": "shell",
+			"command": "curl -s -D - https://www.josetraderx.com/ | grep -E 'Strict-Transport-Security|X-Frame-Options|X-Content-Type-Options|Referrer-Policy|Permissions-Policy'"
+		}
+	]
+}
